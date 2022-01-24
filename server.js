@@ -23,6 +23,11 @@ const prod = require('./routes/itemroutes')
 
 app.use('/api',prod);
 
+//Fire up frontend
+if (process.env.NODE_ENV === 'production') {
+  app.use(express.static('client/build'))
+}
+
 app.listen(port,()=>{
     console.log(`server is running on port : ${port}`)
 })
