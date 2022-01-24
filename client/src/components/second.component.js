@@ -14,7 +14,7 @@ export default class Second extends Component{
     }
 
     componentDidMount(){
-        axios.get('http://localhost:5000/api/apicount')
+        axios.get('https://reactmhy.herokuapp.com/api/apicount')
         .then(res=>{
             this.setState({
                 count:res.data[0].count
