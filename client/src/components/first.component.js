@@ -39,7 +39,7 @@ export default class First extends Component{
             type: this.state.type
         }
         
-        axios.post('http://localhost:5000/api/add',prod)
+        axios.post('https://reactmhy.herokuapp.com/api/add',prod)
         .then(res=>console.log(res.data))
     }
 
@@ -48,7 +48,7 @@ export default class First extends Component{
         return(
             <div className="first" >
             <div className="container">
-            <h1>first Component</h1>
+            <h1>First Component</h1>
                 
             <form onSubmit={this.onsubmit}>
             <div className="form-group">
