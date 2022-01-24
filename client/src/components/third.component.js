@@ -17,7 +17,7 @@ export default class Third extends Component{
     }
 
     componentDidMount(){
-        axios.get('http://localhost:5000/api/')
+        axios.get('https://reactmhy.herokuapp.com/api/')
         .then(res=>{
 
             this.setState({
@@ -33,7 +33,7 @@ export default class Third extends Component{
     delete(id){
         console.log(id)
 
-        axios.delete('http://localhost:5000/api/delete/'+id)
+        axios.delete('https://reactmhy.herokuapp.com/api/delete/'+id)
         .then(res=>{
             console.log(res.data)
 
